@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightcoral;
+}
+
+
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  height: 75vh;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 40px;
+  position: relative;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  background-image: url('back.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.chat-container::-webkit-scrollbar {
+  display: none;
+}
+
+.messages {
+  list-style-type: none;
+  padding: 0;
+}
+
+.messages li {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.sent {
+  text-align: right;
+  background-color: transparent; 
+}
+
+.received {
+  text-align: left;
+  background-color: transparent;
+}
+
+
+.message-text {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.input-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  background-color: transparent;
+  padding: 10px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.send-icon {
+  width: 45px; 
+  height: 45px; 
+  cursor: pointer; 
+}
+
+.message-input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+.google-signin-button {
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  color: #007bff;
+  border-radius: 20px;
+  padding: 10px; 
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  font-size: 16px; 
+  display: flex; 
+  align-items: center; 
+  font-weight: bolder;
+}
+
+.google-signin-button img {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 10px; 
+}
+
+
+.google-signin-button:hover {
+  animation: glow 1s infinite alternate; 
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #007bff;
+  }
+  to {
+    box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff; 
+  }
+}
+
+
+.google-signin-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.sign-out-button {
+  position: fixed;
+  top: 20px;
+  right: 20px; 
+  color: white;
+  background-color: black;
+  font-weight: bolder;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: larger;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px; 
+  }
+
+  .chat-container {
+    height: 70vh; 
+  }
+}
+.message-sender {
+  color: white; 
+}
+
+.delete-icon {
+  color: red; 
+  cursor: pointer;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.delete-icon:hover {
+  opacity: 1; 
+}
+.messages li:hover .delete-icon {
+  display: inline-block;
+}
